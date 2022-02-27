@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+        body {
+        margin: 0;
+        padding: 0;
+        }
+        * {
+           box-sizing: border-box; 
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #clock {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10vw;
+        }
+        </style>
+        <title>Time flies</title>
+    </head>
+    <body>
+        <section class="container">
+            <div id="clock"></div>
+        </section>
+    </body>
+</html>
+
+<script>
+
+const clockDisplay = document.getElementById('clock');
+
+function setTime() {
+    const date = new Date();
+
+    const hour = formatTime(date.getHours());
+    const minutes = formatTime(date.getMinutes());
+    const seconds = formatTime(date.getSeconds());
+
+    clockDisplay.innerText=`${hour} : ${minutes} : ${seconds}`
+}
+
+function formatTime(time){
+    if (time < 10) {
+        return '0' + time;
+    }
+    return time;
+}
+setInterval(setTime, 1000);
+    
+</script>

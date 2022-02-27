@@ -1,8 +1,10 @@
 import express from 'express';
 import { v4 as uuidv4 } from 'uuid';
 
+//app is an instance of my server
 const app = express();
 
+//express 
 app.use(express.json());
 
 let movies = [
@@ -22,20 +24,6 @@ app.get("/movies", (req, res) => {
     res.send(movies);
 });
 
-//CREATE new movie
-app.post('/movies', (req, res) => {
-    const movie = req.body;
-
-    //id is generated with the uiid module
-    const id = uuidv4();
-
-    const movieWithId = {id: id, ...movie}
-
-    movies.push(movieWithId);
-    
-    res.send(`Movie with the title ${movieWithId.title} added to the API`);
-});
-
 //GET movie by id
 app.get('/movies/:id', (req, res) => {
     const {id} = req.params;
@@ -43,6 +31,24 @@ app.get('/movies/:id', (req, res) => {
     const foundMovie = movies.find((movie) => movie.id === id);
 
     res.send(foundMovie);
+});
+
+//CREATE new movie
+app.post('/movies', (req, res) => {
+    const movie = req.body;
+
+    //id is generated with the uiid module
+    const id = uuidv4();
+
+    //if we want to generate our own id...
+    //prefixed notation with ++ in front we increment imidiately
+    //movie.id = ++id;
+
+    const movieWithId = {id: id, ...movie}
+
+    movies.push(movieWithId);
+    
+    res.send(`Movie with the title ${movieWithId.title} added to the API`);
 });
 
 //UPDATE entire movie object
@@ -76,6 +82,9 @@ app.patch('/movies/:id', (req, res) => {
 
     res.send(movieToBeUpdated);
 });
+
+//Anders solution
+//const movieToUpdateWith = { ...foundMovie, ...req.body, id: foundMovie.id}
 
 //DELETE movie by id
 app.delete('/movies/:id', (req, res) => {
