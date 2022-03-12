@@ -1,10 +1,26 @@
 <script>
-	export let name;
+	//export let name; --> Original template
+
+	import Helloworld from "./components/1.introduction/Helloworld.svelte"
+	import DynamicAtt from "./components/1.Introduction/DynamicAtt.svelte";
+	import Styling from "./components/1.Introduction/Styling.svelte";
+	import NestedComp from "./components/1.Introduction/NestedComp.svelte";
+	import HtmlTags from "./components/1.Introduction/HtmlTags.svelte";
+	import Assignments from "./components/2.Reactivity/Assignments.svelte";
+	import Declarations from "./components/2.Reactivity/Declarations.svelte";
+	import Statements from "./components/2.Reactivity/Statements.svelte";
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<Helloworld/>
+	<DynamicAtt/>
+	<Styling/>
+	<NestedComp/>
+	<HtmlTags/>
+	<Assignments/>
+	<Declarations/>
+	<Statements/>
+	
 </main>
 
 <style>
@@ -15,12 +31,6 @@
 		margin: 0 auto;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
 
 	@media (min-width: 640px) {
 		main {

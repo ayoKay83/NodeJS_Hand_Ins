@@ -95,5 +95,4 @@ app.delete('/movies/:id', (req, res) => {
     res.send(`Movie with the id ${id} has been deleted.`);
 });
 
-
 app.listen(8080);
