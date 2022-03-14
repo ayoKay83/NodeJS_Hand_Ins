@@ -6,9 +6,26 @@
 	import Styling from "./components/1.Introduction/Styling.svelte";
 	import NestedComp from "./components/1.Introduction/NestedComp.svelte";
 	import HtmlTags from "./components/1.Introduction/HtmlTags.svelte";
+	
 	import Assignments from "./components/2.Reactivity/Assignments.svelte";
 	import Declarations from "./components/2.Reactivity/Declarations.svelte";
 	import Statements from "./components/2.Reactivity/Statements.svelte";
+	
+	import DeclaringProps from "./components/3.Props/DeclaringProps.svelte";
+	import DefaultValues from "./components/3.Props/DefaultValues.svelte";
+	import SpreadProbs from "./components/3.Props/SpreadProbs.svelte";
+
+	import If from "./components/4.Logic/If.svelte";
+	import Else from "./components/4.Logic/Else.svelte";
+	import ElseIf from "./components/4.Logic/ElseIf.svelte";
+	import Each from "./components/4.Logic/Each.svelte";
+    import Keyed from "./components/4.Logic/Keyed.svelte";
+
+	import DomEvents from "./components/5.Events/DomEvents.svelte";
+	import InlineHandlers from "./components/5.Events/InlineHandlers.svelte";
+	import EventModifiers from "./components/5.Events/EventModifiers.svelte";
+	import ComponentEvents from "./components/5.Events/ComponentEvents.svelte";
+	import EventForwarding from "./components/5.Events/EventForwarding.svelte";
 </script>
 
 <main>
@@ -17,10 +34,27 @@
 	<Styling/>
 	<NestedComp/>
 	<HtmlTags/>
+	
 	<Assignments/>
 	<Declarations/>
 	<Statements/>
 	
+	<DeclaringProps destination={"the Galaxy"}/>
+	<DefaultValues/>
+	<SpreadProbs/>
+
+	<If/>
+	<Else/>
+	<ElseIf accountBalance={42}/>
+	<Each/>
+	<Keyed/>
+
+	<!-- <DomEvents/> -->
+	<InlineHandlers/>
+	<EventModifiers/>
+	<ComponentEvents/>
+	<EventForwarding/>
+
 </main>
 
 <style>
