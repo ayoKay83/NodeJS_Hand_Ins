@@ -15,11 +15,11 @@
 	import DefaultValues from "./components/3.Props/DefaultValues.svelte";
 	import SpreadProbs from "./components/3.Props/SpreadProbs.svelte";
 
-	import If from "./components/4.Logic/If.svelte";
-	import Else from "./components/4.Logic/Else.svelte";
-	import ElseIf from "./components/4.Logic/ElseIf.svelte";
-	import Each from "./components/4.Logic/Each.svelte";
-    import Keyed from "./components/4.Logic/Keyed.svelte";
+	import If from "./components/4.SvelteLogic/If.svelte";
+	import Else from "./components/4.SvelteLogic/Else.svelte";
+	import ElseIf from "./components/4.SvelteLogic/ElseIf.svelte";
+	import Each from "./components/4.SvelteLogic/Each.svelte";
+    import Keyed from "./components/4.SvelteLogic/Keyed.svelte";
 
 	import DomEvents from "./components/5.Events/DomEvents.svelte";
 	import InlineHandlers from "./components/5.Events/InlineHandlers.svelte";
