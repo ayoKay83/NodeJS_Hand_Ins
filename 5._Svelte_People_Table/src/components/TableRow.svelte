@@ -2,13 +2,12 @@
     //export let personData;
     export let personData;
 </script>
+{#each personData as data}
     <tr>
-        {#each personData as personData}
-        <td>{personData.firstName}</td>
-        <td>{personData.lastName}</td>
-        {/each}
+        <td>{data.firstName}</td>
+        <td>{data.lastName}</td>  
     </tr>
-
+    {/each}
 <style>
      tr {
 		border : 1px solid black

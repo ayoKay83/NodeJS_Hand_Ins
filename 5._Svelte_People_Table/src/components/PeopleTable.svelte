@@ -5,9 +5,8 @@
     
     
     let headers = ["First Name", "Last Name"];
-    
-    let personData = [];
-   
+
+   let personData = [];
    
     function createDataRows () {
         for (let i = 0; i < 10; i++) {
@@ -23,9 +22,9 @@
     
     <TableHead headers={headers}/>
     <!-- The #each loop results in a Empty Block error and a white page-->
-  <!-- {#each personData as data} -->
+  
    <TableRow personData={personData}/>
-  <!-- {/each} --> 
+ 
    
 
 </table>
